@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.login_button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+.section {
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.menu_list {
+  display: flex;
+}
+.menu_list li {
+  padding: 10px;
+}
+.search {
+  border-bottom: 1px solid;
+  margin-right: 20px;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.search input {
+  padding: 10px;
+  outline: none;
+  border: none;
+}
