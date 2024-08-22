@@ -1,14 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
-const ProductCard = () => {
+const ProductCard = ({ item }) => {
+  const navigate = useNavigate();
+  const showDetail = () => {
+    navigate(`/product/${item.id}`);
+  };
   return (
-    <div>
-      <img
-        src="https://lp2.hm.com/hmgoepprod?set=source[/ac/36/ac36f6033a3b300bc0114d8f4e6ea28f5424d339.jpg],origin[dam],category[],type[LOOKBOOK],res[w],hmver[1]&call=url[file:/product/main]"
-        alt=""
-      />
-      <div>벨티드 트윌 코트</div>
-      <div>₩119,000</div>
+    <div className="product_card" onClick={showDetail}>
+      <img className="product_img" src={item?.img} alt="" />
+      <div className="product_choice">
+        {item?.choice == true ? "Conscious choice" : ""}
+      </div>
+      <div className="product_title">{item?.title}</div>
+      <div className="product_price">₩{item?.price}</div>
+      <div className="product_new">{item?.new == true ? "신제품" : ""}</div>
     </div>
   );
 };

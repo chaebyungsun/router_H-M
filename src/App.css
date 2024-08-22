@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 14px;
+}
+.login {
+  margin-left: 10px;
 }
 .login_button {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
+  cursor: pointer;
 }
 .section {
   display: flex;
@@ -36,4 +41,20 @@
   padding: 10px;
   outline: none;
   border: none;
+}
+.product_card {
+  transition: transform 0.3s ease; /* 부드러운 확대 애니메이션 */
+  margin-bottom: 20px;
+}
+
+.product_card:hover {
+  transform: scale(1.1); /* 호버 시 카드 전체 확대 */
+}
+
+.product_img {
+  width: 100%;
+  height: auto;
+}
+.product_price {
+  font-weight: bold;
 }

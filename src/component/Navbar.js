@@ -1,7 +1,7 @@
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { useNavigate } from "react-router";
 import React from "react";
 
 const Navbar = () => {
@@ -14,12 +14,16 @@ const Navbar = () => {
     "H&M Home",
     "Sale",
   ];
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate("/login");
+  };
   return (
     <div>
       <div>
-        <div className="login_button">
+        <div className="login_button" onClick={goToLogin}>
           <FontAwesomeIcon icon={faUser} />
-          <div>로그인</div>
+          <div className="login">로그인</div>
         </div>
       </div>
       <div className="section">
