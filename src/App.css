@@ -145,7 +145,6 @@
   }
 
   .side-menu-list button:hover {
-    background-color: beige;
-    border-radius: 3px;
+    color: crimson;
   }
 }
