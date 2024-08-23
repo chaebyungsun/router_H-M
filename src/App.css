@@ -10,9 +10,11 @@
 .login_button {
   display: flex;
   justify-content: flex-end;
-  margin: 20px;
+  align-items: center;
   cursor: pointer;
+  padding: 20px;
 }
+
 .section {
   display: flex;
   justify-content: center;
@@ -54,7 +56,96 @@
 .product_img {
   width: 100%;
   height: auto;
+  margin-top: 20px;
 }
 .product_price {
   font-weight: bold;
+}
+.detail_img {
+  display: flex;
+  justify-content: flex-end;
+}
+.detail_title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.detail_price {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.detail_choice {
+  margin-bottom: 20px;
+}
+.add_button {
+  width: 100%;
+  margin-top: 20px;
+}
+.loading {
+  text-align: center;
+}
+.hide {
+  visibility: hidden;
+}
+.side-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hide {
+    visibility: visible;
+  }
+  .menu {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .burger_menu {
+    padding: 20px;
+  }
+  .side-menu {
+    display: block;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fafafa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+  }
+  .side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+  }
+
+  .side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+  }
+
+  .side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-menu-list button:hover {
+    background-color: beige;
+    border-radius: 3px;
+  }
 }
